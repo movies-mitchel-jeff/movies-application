@@ -14,7 +14,7 @@ const {getMovies, postMovie } = require('./api.js');
 $('#movies').html("loading...");
 
 getMovies().then((movies) => {
-  console.log('Here are all the movies:');
+  console.log('Here are all the existing movies:');
   $('#movies').html('Here are all the movies: ');
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
@@ -56,15 +56,21 @@ $("#loading").ajaxStop(function(){
 // fetch(url, options)
 //   .then(response => db.JSON;
 
+$('#blue').click(function () {
+
 postMovie({
-  "title": "Notre-Dame de Paris",
-  "rating": 3
+  "title": $('#movieTitle').val(),
+  "rating": $('#movieRating').val()
 }).then(data => getMovies().then((movie) => {
-  console.log('Here are all the books:');
-  movie.forEach(({title, rating}) => {
-    console.log(`id# ${id} - ${title} - ${rating}`);
+  console.log('Here are all the new movies:');
+  $('#movies').empty();
+  movie.forEach(({title, rating, id}) => {
+    console.log(` id#${id} - ${title} - ${rating}`);
+    $('#movies').append(` id#${id} - ${title} - ${rating}`)
   });
 }).catch((error) => {
-  alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
+  alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.');
   console.log(error);
 }));
+
+});
