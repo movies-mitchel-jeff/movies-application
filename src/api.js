@@ -22,8 +22,14 @@ module.exports = {           //exporting each function to be accessed by index.j
       body: JSON.stringify(movie)
     })
         .then(response => response.json());
+  },
+  deleteMovie: (id) => {
+    return fetch(`api/movies/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+        .then(response => response.json());
   }
-
-
-
 };

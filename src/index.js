@@ -9,7 +9,7 @@ sayHello('World');
 /**
  * require style imports
  */
-const {getMovies, postMovie, editMovie } = require('./api.js');
+const {getMovies, postMovie, editMovie, deleteMovie } = require('./api.js');
 
 $('#movies').html("loading...");
 
@@ -58,8 +58,9 @@ postMovie({
 });
 
 
-$("#update").click(function(){
+// Updates existing movie list with new user inputs
 
+$("#update").click(function(){
 
 editMovie(2, {
   "title": $("#movieTitle").val(),
@@ -75,4 +76,23 @@ editMovie(2, {
   alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
   console.log(error);
 }));
+});
+
+
+
+// Deletes specified movie
+
+$("#delete").click(function() {
+
+  deleteMovie(2).then(data => getMovies().then((movies) => {
+    console.log('Here are all the books after the deletion:');
+    movies.forEach(({title, rating, id}) => {
+      console.log(`id# ${id} - ${title} - ${rating}.`);
+      $('#movies').append(`<div> id#${id} - ${title} - ${rating} <h5>Edit</h5></div>`)
+    });
+  }).catch((error) => {
+    alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
+    console.log(error);
+  }));
+
 });
