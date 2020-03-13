@@ -13,7 +13,16 @@ module.exports = {           //exporting each function to be accessed by index.j
     })
         .then(response => response.json());
   },
-
+  editMovie: (id, movie) => {
+    return fetch(`api/movies/${id}`, {
+      method: 'Put',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(movie)
+    })
+        .then(response => response.json());
+  }
 
 
 
