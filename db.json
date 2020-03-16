@@ -4,16 +4,6 @@
       "title": "Casablanca",
       "rating": "4",
       "id": 1
-    },
-    {
-      "title": "golf",
-      "rating": "33",
-      "id": 2
-    },
-    {
-      "title": "baseball",
-      "rating": "33",
-      "id": 3
     }
   ]
 }
