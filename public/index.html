@@ -9,11 +9,13 @@
 <div id="blue">BLUE</div>
 <div id="update">Update Movie Info</div>
 <div id="delete">Delete selected Movie</div>
-<div id="test" class="container">
-    <h1>Hello There!</h1>
-    <p>To get started, edit <code>src/index.js</code>.</p>
-</div>
+<!--<div id="test" class="container">-->
+<!--&lt;!&ndash;    <h1>Hello There!</h1>&ndash;&gt;-->
+<!--    <p>To get started, edit <code>src/index.js</code>.</p>-->
+<!--</div>-->
 <div id="movies"></div>
+
+
 <script src="./main.js"></script>
 <!--    <script src="js/jquery-2.2.4.js" crossorigin="anonymous"></script>-->
 <form id="newMovie">
@@ -21,6 +23,16 @@
     <input type="text" placeholder="Title" id="movieTitle">
     <input type="text" placeholder="Rating" id="movieRating">
     <!--    <button id="newMovieButton">Submit</button>-->
+</form>
+<form id="editMovie">
+    <label>Adjust movie title or rating</label>
+    <input type="text" placeholder="Selected movie to edit" id="chosenTitle">
+    <input type="text" placeholder="Title" id="editTitle">
+    <input type="text" placeholder="Rating" id="editRating">
+</form>
+<form id="deleteMovie">
+    <label id="removePrompt">Enter title or ID of film you wish to remove</label>
+    <input type="text" placeholder="Title" id="removeTitle">
 </form>
 <div id="buttonReplace">Submit</div>
 </body>

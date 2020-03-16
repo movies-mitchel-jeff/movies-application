@@ -20,7 +20,7 @@ getMovies().then((movies) => {
   $('#movies').html('Here are all the movies: ');
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
-    $('#movies').append(`<div>id#${id} - ${title} - rating: ${rating} <h5>Edit</h5></div>`)
+    $('#movies').append(`<div id="${id}">id#${id} - ${title} - rating: ${rating} <h5>Edit</h5></div>`)
   });
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
@@ -62,9 +62,9 @@ $('#blue').click(function () {
 
 $("#update").click(function(){
 
-  editMovie(2, {
-    "title": $("#movieTitle").val(),
-    "rating": $("#movieRating").val()
+  editMovie($("#chosenTitle").val(), {
+    "title": $("#editTitle").val(),
+    "rating": $("#editRating").val()
   }).then(data => getMovies().then((movie) => {
     console.log('Here is the edited movie:');
     $("#movies").empty();
@@ -83,17 +83,18 @@ $("#update").click(function(){
 // Deletes specified movie
 
 $("#delete").click(function() {
-
-  deleteMovie(2).then(data => getMovies().then((movies) => {
-    console.log('Here are all the books after the deletion:');
+  console.log($("#removeTitle").attr("id"));
+  deleteMovie($("#removeTitle").val()).then(data => getMovies()).then((movies) => {
+    // console.log('Here are all the books after the deletion:');
+    console.log(movies);
+      $('#movies').empty();
     movies.forEach(({title, rating, id}) => {
       console.log(`id# ${id} - ${title} - ${rating}.`);
-      $('#movies').empty();
       $('#movies').append(`<div> id#${id} - ${title} - ${rating} <h5>Edit</h5></div>`)
     });
   }).catch((error) => {
     alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
     console.log(error);
-  }));
+  });
 
 });
