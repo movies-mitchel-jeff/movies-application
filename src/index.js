@@ -25,7 +25,7 @@ getMovies().then((movies) => {
     $('#movies').append(`<div>id#${id} - ${title} - rating: ${rating} <h5 id="${id}-edit">Edit</h5> <div id="${id}-inputs"><input type="text" placeholder="Title" id="movieTitle"><input type="text" placeholder="Rating" id="movieRating"></div></div>`)
   });
 
-  $('#movieRating , #movieTitle').hide();
+  $('#movieRating , #movieTitle').hide(); //This needs to target an individual input id to reveal the option to edit, not all inputs.
   $('h5').click(function(){
     console.log($(this).attr("id"));
     $("#movieRating , #movieTitle").slideDown();
