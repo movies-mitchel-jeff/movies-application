@@ -20,7 +20,7 @@ getMovies().then((movies) => {
   $('#movies').html('Here are all the movies: ');
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
-    $('#movies').append(`<div>id#${id} - ${title} - rating: ${rating} <h5>Edit</h5></div>`)
+    $('#movies').append(`<div>id#${id} - ${title} - rating: ${rating} <h5>Edit</h5> <input type="text" placeholder="Title" id="movieTitle"></div>`)
   });
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
@@ -48,7 +48,7 @@ postMovie({
   $('#movies').empty();
   movie.forEach(({title, rating, id}) => {
     console.log(` id#${id} - ${title} - ${rating}`);
-    $('#movies').append(`<div> id#${id} - ${title} - ${rating} <h5>Edit</h5></div>`)
+    $('#movies').append(`<div> id#${id} - ${title} - ${rating} <input type="text" placeholder="Title" id="movieTitle"></div>`)
   });
 }).catch((error) => {
   alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.');
@@ -59,24 +59,30 @@ postMovie({
 
 
 // Updates existing movie list with new user inputs
+//
+// $(“button”).click(function(){
+//   $(“p”).slideDown();
+// });
 
-$("#update").click(function(){
 
-editMovie(2, {
-  "title": $("#movieTitle").val(),
-  "rating": $("#movieRating").val()
-}).then(data => getMovies().then((movie) => {
-  console.log('Here is the edited movie:');
-  $("#movies").empty();
-  movie.forEach(({title, rating, id}) => {
-    console.log(`id# ${id} - ${title} - ${rating} `);
-    $('#movies').append(`<div> id#${id} - ${title} - ${rating} <h5>Edit</h5></div>`)
+
+    $("#update").click(function () {
+
+    editMovie(2, {
+      "title": $("#movieTitle").val(),
+      "rating": $("#movieRating").val()
+    }).then(data => getMovies().then((movie) => {
+      console.log('Here is the edited movie:');
+      $("#movies").empty();
+      movie.forEach(({title, rating, id}) => {
+        console.log(`id# ${id} - ${title} - ${rating} `);
+        $('#movies').append(`<div> id#${id} - ${title} - ${rating}  <input type="text" placeholder="Title" id="movieTitle"></div>`)
+      });
+    }).catch((error) => {
+      alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
+      console.log(error);
+    }));
   });
-}).catch((error) => {
-  alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
-  console.log(error);
-}));
-});
 
 
 
@@ -88,7 +94,7 @@ $("#delete").click(function() {
     console.log('Here are all the books after the deletion:');
     movies.forEach(({title, rating, id}) => {
       console.log(`id# ${id} - ${title} - ${rating}.`);
-      $('#movies').append(`<div> id#${id} - ${title} - ${rating} <h5>Edit</h5></div>`)
+      $('#movies').append(`<div> id#${id} - ${title} - ${rating} <input type="text" placeholder="Title" id="movieTitle"></div>`)
     });
   }).catch((error) => {
     alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
