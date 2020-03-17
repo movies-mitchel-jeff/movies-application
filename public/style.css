@@ -54,3 +54,11 @@ div.jumbotron {
     padding-bottom: 0px;
    background-color: black;
 }
+
+.ticket {
+    box-shadow: 0 4px 8px 0 darkgray;
+}
+.ticket:hover {
+    box-shadow: 0 4px 12px 0 darkgray;
+    background-color: antiquewhite;
+}
