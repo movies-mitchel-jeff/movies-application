@@ -2,6 +2,10 @@ html, body {
     height: 100%;
 }
 
+/*body {*/
+/*    background-color: black;*/
+/*}*/
+
 .container {
     position: relative;
     top: 50%;
@@ -59,6 +63,21 @@ div.jumbotron {
     box-shadow: 0 4px 8px 0 darkgray;
 }
 .ticket:hover {
-    box-shadow: 0 4px 12px 0 darkgray;
+    box-shadow: 0 4px 12px 0 black;
+    background-color: rgb(105 15 18);
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    box-shadow: 0 4px 6px 0 lightgray;
+}
+.card:hover {
     background-color: antiquewhite;
+    box-shadow: 0 4px 12px 0 black;
+}
+
+#movie-container {
+    margin-bottom: 200px;
 }

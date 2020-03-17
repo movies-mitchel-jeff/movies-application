@@ -18,8 +18,8 @@ getMovies().then((movies) => {
   console.log('Here are all the existing movies:');
   movies.forEach(({title, rating, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
-    $('#movies').append(`<div id="${id}" class="col-sm-6">
-        <div class="card" style="width: 18rem;">
+    $('#movies').append(`<div id="${id}" class="col-sm-4">
+        <div class="card" style="width: 18rem; height: 18rem;">
          <div class="card-body">
               <h5 class="card-title">Movie: #${id} - ${title}</h5>
              <p class="card-text">rating: ${rating}</p>
@@ -53,7 +53,7 @@ $('#add').click(function () {
     $('#movies').empty();
     movie.forEach(({title, rating, id}) => {
       console.log(` id#${id} - ${title} - ${rating}`);
-      $('#movies').append(`<div> <div class="card" style="width: 18rem;">
+      $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Movie: ${id} - ${title} </h5>
         <p class="card-text"> Rating:${rating}</p>
@@ -82,7 +82,7 @@ $("#update").click(function(){
     $("#movies").empty();
     movie.forEach(({title, rating, id}) => {
       console.log(`id# ${id} - ${title} - ${rating} `);
-      $('#movies').append(`<div> <div class="card" style="width: 18rem;">
+      $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Movie: ${id} - ${title} </h5>
         <p class="card-text"> Rating: ${rating}</p>
@@ -110,7 +110,7 @@ $("#delete").click(function() {
       $('#movies').empty();
     movies.forEach(({title, rating, id}) => {
       console.log(`id# ${id} - ${title} - ${rating}.`);
-      $('#movies').append(`<div> <div class="card" style="width: 18rem;">
+      $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Movie: ${id} - ${title}</h5>
         <p class="card-text"> Rating: ${rating}</p>
