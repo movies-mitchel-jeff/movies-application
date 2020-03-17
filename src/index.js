@@ -59,6 +59,8 @@ $('#add').click(function () {
         <p class="card-text"> Rating:${rating}</p>
     </div>
 </div></div>`)
+      $("#movieTitle").val("");
+      $("#movieRating").val("");
     });
   }).catch((error) => {
     alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.');
@@ -86,6 +88,9 @@ $("#update").click(function(){
         <p class="card-text"> Rating: ${rating}</p>
     </div>
 </div></div>`)
+      $("#editTitle").val("");
+      $("#editRating").val("");
+      $("#chosenTitle").val("");
     });
   }).catch((error) => {
     alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
@@ -111,10 +116,48 @@ $("#delete").click(function() {
         <p class="card-text"> Rating: ${rating}</p>
     </div>
 </div></div>`)
+      $("#removeTitle").val("");
     });
   }).catch((error) => {
     alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
     console.log(error);
   });
 
+});
+
+// function deferVideo() {
+//
+//   //defer html5 video loading
+//   $("video source").each(function() {
+//     var sourceFile = $(this).attr("data-src");
+//     $(this).attr("src", sourceFile);
+//     var video = this.parentElement;
+//     video.load();
+//     // uncomment if video is not autoplay
+//     //video.play();
+//   });
+//
+// }
+// window.onload = deferVideo;
+
+$("#newMovie").hide();
+$("#editMovie").hide();
+$("#deleteMovie").hide();
+
+$("#addButton").click(function(){
+  $("#newMovie").slideDown();
+  $("#editMovie").hide();
+  $("#deleteMovie").hide();
+});
+
+$("#editButton").click(function(){
+  $("#editMovie").slideDown()
+  $("#newMovie").hide();
+  $("#deleteMovie").hide();
+});
+
+$("#deleteButton").click(function(){
+  $("#deleteMovie").slideDown()
+  $("#newMovie").hide();
+  $("#editMovie").hide();
 });

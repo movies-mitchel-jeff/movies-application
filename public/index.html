@@ -14,11 +14,22 @@
 
 
 <!--Jumbotron-->
-<div class="jumbotron jumbotron-fluid">
-    <div class="container d-flex justify-content-center">
-        <h1 class="display-4">Movies Application </h1>
-    </div>
+<!--<div class="jumbotron jumbotron-fluid d-flex justify-content-center text-center">-->
+<!--    <div class="container d-flex justify-content-center">-->
+<!--        <h1 class="display-4">Movies Application </h1>-->
+<!--    </div>-->
+<!--        <video id="video-background" class="embed-responsive embed-responsive-16by9" preload muted autoplay loop>-->
+<!--            <source src="../movies-application/img/into%20final.mp4" type="video/mp4">-->
+<!--        </video>-->
+<!--</div>-->
+
+<div class="jumbotron jumbotron-fluid d-flex justify-content-center text-center">
+    <video id="video-background" class="embed-responsive embed-responsive-16by9" preload muted autoplay loop>
+        <source src="img/into%20final.mp4" type="video/mp4">
+    </video>
 </div>
+
+
 
 
 <!------------The Sticky Top Navigation------------>
@@ -31,8 +42,36 @@
         <a class="nav-item nav-link nav-menu-links" href="#">Awards</a>
 
     </div>
-
 </nav>
+<div id="buttonContainer" class="d-flex justify-content-around">
+    <div id="addButton">Add</div>
+    <div id="editButton">Edit</div>
+    <div id="deleteButton">Remove</div>
+</div>
+<hr>
+
+<div id="inputFields" class="d-flex justify-content-around">
+    <form id="newMovie">
+        <h5>Add a new movie:</h5>
+        <input type="text" placeholder="Title" id="movieTitle">
+        <input type="text" placeholder="Rating" id="movieRating">
+        <div id="add">Add</div>
+
+    </form>
+    <form id="editMovie">
+        <h5>Edit an existing movie entry:</h5>
+        <input type="text" placeholder="Movie ID to Edit" id="chosenTitle">
+        <input type="text" placeholder="New Title" id="editTitle">
+        <input type="text" placeholder="New Rating" id="editRating">
+        <div id="update">Update</div>
+    </form>
+    <form id="deleteMovie">
+        <h5>Remove a movie:</h5>
+        <input type="text" placeholder="Movie ID to Remove" id="removeTitle">
+        <div id="delete">Delete</div>
+    </form>
+</div>
+
     <h1 class="display-4 text-center">Movies:</h1>
 
 <div id="movie-container">
@@ -40,32 +79,12 @@
 </div>
 
 <div>
-    <h3 class="display-4 text-center">Edit the list of movies</h3>
-    <div id="add">Add movie to list</div>
-    <div id="update">Update Movie Info</div>
-    <div id="delete">Delete selected Movie</div>
+<!--    <h3 class="display-4 text-center">Edit the list of movies</h3>-->
 </div>
 
 
 
 <script src="./main.js"></script>
 <!--    <script src="js/jquery-2.2.4.js" crossorigin="anonymous"></script>-->
-<form id="newMovie">
-    <label>Enter new movie here</label>
-    <input type="text" placeholder="Title" id="movieTitle">
-    <input type="text" placeholder="Rating" id="movieRating">
-    <!--    <button id="newMovieButton">Submit</button>-->
-</form>
-<form id="editMovie">
-    <label>Adjust movie title or rating</label>
-    <input type="text" placeholder="Selected movie to edit" id="chosenTitle">
-    <input type="text" placeholder="Title" id="editTitle">
-    <input type="text" placeholder="Rating" id="editRating">
-</form>
-<form id="deleteMovie">
-    <label id="removePrompt">Enter title or ID of film you wish to remove</label>
-    <input type="text" placeholder="Title" id="removeTitle">
-</form>
-<div id="buttonReplace">Submit</div>
 </body>
 </html>
