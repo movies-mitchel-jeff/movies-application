@@ -16,10 +16,11 @@ const {getMovies, postMovie, editMovie, deleteMovie } = require('./api.js');
 //This prints existing movie JSON file
 getMovies().then((movies) => {
   console.log('Here are all the existing movies:');
-  movies.forEach(({title, rating, id}) => {
+  movies.forEach(({title, rating, id, img}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     $('#movies').append(`<div id="${id}" class="col-sm-4">
         <div class="card" style="width: 18rem; height: 18rem;">
+        <img src="../${img}" alt="poster">
          <div class="card-body">
               <h5 class="card-title">Movie: #${id} - ${title}</h5>
              <p class="card-text">rating: ${rating}</p>
@@ -51,9 +52,10 @@ $('#add').click(function () {
   }).then(data => getMovies().then((movie) => {
     console.log('Here are all the new movies:');
     $('#movies').empty();
-    movie.forEach(({title, rating, id}) => {
+    movie.forEach(({title, rating, id, img}) => {
       console.log(` id#${id} - ${title} - ${rating}`);
       $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
+        <img src=${img} class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">Movie: ${id} - ${title} </h5>
         <p class="card-text"> Rating:${rating}</p>

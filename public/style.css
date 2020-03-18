@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    /*background-color: black;*/
 }
 
 /*body {*/
@@ -72,6 +73,7 @@ div.jumbotron {
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     box-shadow: 0 4px 6px 0 lightgray;
+
 }
 .card:hover {
     background-color: antiquewhite;
@@ -80,4 +82,12 @@ div.jumbotron {
 
 #movie-container {
     margin-bottom: 200px;
+}
+
+#curtains {
+    background-image: url("img/seats.png");
+}
+
+#buttonContainer {
+    background-color: black;
 }
