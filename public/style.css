@@ -4,6 +4,7 @@ html, body {
     /*background: rgb(0,0,0);*/
     /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(61,4,8,1) 47%, rgba(150,0,15,1) 100%);*/
 
+
 }
 
 /*body {*/
@@ -91,8 +92,13 @@ div.jumbotron {
 
 }
 .card:hover {
-    background-color: antiquewhite;
-    box-shadow: 0 4px 6px 0 lightgray;
+    /*background-color: antiquewhite;*/
+    /*box-shadow:  4px 6px  lightgray;*/
+        /*background: rgb(0,0,0);*/
+        /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(225,130,0,1) 33%, rgba(225,167,0,1) 100%);*/
+        color: #ffa502;
+        box-shadow: 0 0 50px #d35400;
+        text-shadow: 0 0 50px #d35400;
 }
 
 /*#movie-container {*/
@@ -107,7 +113,7 @@ div.jumbotron {
 
 #buttonContainer {
     /*background-color: black;*/
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 #seats {
@@ -128,4 +134,10 @@ div.jumbotron {
 
 #newMovie, #editMovie, #deleteMovie {
     color: goldenrod;
+    font-family: 'Limelight', cursive;
+}
+
+.card-body {
+    color: white;
+    font-family: 'Limelight', cursive;
 }

@@ -19,9 +19,22 @@
       "img": "img/nowshowingkhan.png"
     },
     {
-      "title": "david",
-      "rating": "codeup",
-      "id": 5
+      "title": "Good Will Hunting",
+      "rating": "10",
+      "id": 4,
+      "img": "img/nowshowinghunting.png"
+    },
+    {
+      "title": "Star Wars Episode IV: A New Hope",
+      "rating": "10",
+      "id": 5,
+      "img": "img/nowhowinghope.png"
+    },
+    {
+      "title": "Scarface",
+      "rating": "10",
+      "id": 6,
+      "img": "img/nowshowingscar.png"
     }
   ]
 }
