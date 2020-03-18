@@ -28,33 +28,17 @@
 <!-------Seats-------------->
 <div>
     <img src="img/seats.png" id="seats">
-
 </div>
 
 <!--background gradient-->
 <div id="gradient">
 
-
-
-<!------------The Sticky Top Navigation------------>
-<!--<nav class="navbar fixed-top " id="top-nav">-->
-<!--&lt;!&ndash;    <img src="img/film-reel.png" alt="" id="bean-nav-img">&ndash;&gt;-->
-<!--    <a class="navbar-brand" href="#">Codeup Movie Application</a>-->
-<!--    <div class="navbar-items d-flex ml-auto">-->
-<!--        <a class="nav-item nav-link nav-menu-links" href="#">Actors</a>-->
-<!--        <a class="nav-item nav-link nav-menu-links" href="#">Directors</a>-->
-<!--        <a class="nav-item nav-link nav-menu-links" href="#">Awards</a>-->
-<!--    </div>-->
-<!--</nav>-->
-
 <!------Ticket Buttons ---------->
-
 <div id="buttonContainer" class="d-flex justify-content-around">
     <div id="addButton" class="ticket grow"><img src="img/add-ticket-button.png" alt="ticket"></div>
     <div id="editButton" class="ticket grow"><img src="img/edit%20ticket%20button.png"></div>
     <div id="deleteButton" class="ticket grow"><img src="img/remove%20ticket%20button.png"></div>
 </div>
-
 
 <!-------Input Fields That Slide Down on ticket click------->
 <div id="inputFields" class="d-flex justify-content-around">
@@ -62,28 +46,28 @@
         <h5>Add a new movie:</h5>
         <input type="text" placeholder="Title" id="movieTitle">
         <input type="text" placeholder="Rating" id="movieRating">
-        <div id="add">Submit</div>
+        <div id="add"><br>Submit</div>
     </form>
     <form id="editMovie">
         <h5>Edit an existing movie entry:</h5>
         <input type="text" placeholder="Movie ID to Edit" id="chosenTitle">
         <input type="text" placeholder="New Title" id="editTitle">
         <input type="text" placeholder="New Rating" id="editRating">
-        <div id="update">Submit</div>
+        <div id="update"><br>Submit</div>
     </form>
     <form id="deleteMovie">
         <h5>Remove a movie:</h5>
         <input type="text" placeholder="Movie ID to Remove" id="removeTitle">
-        <div id="delete">Submit</div>
+        <div id="delete"><br>Submit</div>
     </form>
 </div>
-
-<!--<h1 class="display-4 text-center">Movies:</h1>-->
+    <br><br>
 
 <!-------Container for all movie cards------->
 <div id="movie-container">
     <div id="movies" class="row"></div>
 </div>
+
 <!--End background gradient-->
 </div>
 

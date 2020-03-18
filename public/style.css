@@ -1,118 +1,50 @@
-html, body {
-    /*height: 100%;*/
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
-    /*background: rgb(0,0,0);*/
-    /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(61,4,8,1) 47%, rgba(150,0,15,1) 100%);*/
-
-
-}
-
-/*body {*/
-/*    background-color: black;*/
-/*}*/
-
 .container {
     position: relative;
     top: 50%;
     transform: translateY(-100%);
     text-align: center;
 }
+
 div.jumbotron {
     margin-bottom: 0;
 }
 
-/*#top-nav{*/
-/*    position: sticky;*/
-/*    background-color: lightgray;*/
-/*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-/*    margin-bottom: 30px;*/
-/*}*/
-/*#top-nav a {*/
-/*    color: black;*/
-/*}*/
-
-/*.jumbotron {*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    background-color:black;*/
-/*}*/
-/*.jumbotron video {*/
-/*    position: absolute;*/
-/*    z-index: 1;*/
-/*    top: 0;*/
-/*    width:100%;*/
-/*    height: 100%;*/
-/*    !*  object-fit is not supported on IE  *!*/
-/*    object-fit: cover;*/
-
-/*}*/
-/*.jumbotron .container {*/
-/*    z-index: 2;*/
-/*    position: relative;*/
-/*}*/
-
 #video-background {
-
     height: 50%;
     width: 50%;
-
 }
 
 #jumbotronContainer {
-    padding-top: px;
-    padding-bottom: 0px;
-   background-color: black;
+    padding-bottom: 0;
+    background-color: black;
     z-index: -1;
 }
-
-.ticket {
-    /*box-shadow: 0 4px 8px 0 darkgray;*/
-}
-/*.ticket:hover {*/
-/*    !*box-shadow: 0 4px 12px 0 black;*!*/
-/*    !*background-color: goldenrod;*!*/
-/*    !*background: rgb(0,0,0);*!*/
-/*    !*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(225,130,0,1) 33%, rgba(225,167,0,1) 100%);*!*/
-/*    color: #ffa502;*/
-/*    box-shadow: 0 0 15px #d35400;*/
-/*    text-shadow: 0 0 15px #d35400;*/
-/*}*/
 
 .ticket:hover:before {
     transform: scale(1.2);
     box-shadow: 0 0 15px #d35400;
     filter: blur(3px);
 }
+
 .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     background-color: goldenrod;
     box-shadow: 0 4px 12px 0 black;
-
 }
+
 .card:hover {
-    /*background-color: antiquewhite;*/
-    /*box-shadow:  4px 6px  lightgray;*/
-        /*background: rgb(0,0,0);*/
-        /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(225,130,0,1) 33%, rgba(225,167,0,1) 100%);*/
         color: #ffa502;
         box-shadow: 0 0 50px #d35400;
         text-shadow: 0 0 50px #d35400;
 }
 
-/*#movie-container {*/
-/*    margin-bottom: 200px;*/
-/*}*/
-
 #curtains {
-    /*background-image: url("img/curtains.png");*/
-    /*z-index: 300;*/
     width: 100%;
 }
 
 #buttonContainer {
-    /*background-color: black;*/
     padding-bottom: 30px;
 }
 
@@ -128,10 +60,6 @@ div.jumbotron {
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
 
-/*h5 {*/
-/*    color: goldenrod;*/
-/*}*/
-
 #newMovie, #editMovie, #deleteMovie {
     color: goldenrod;
     font-family: 'Limelight', cursive;
@@ -140,4 +68,12 @@ div.jumbotron {
 .card-body {
     color: white;
     font-family: 'Limelight', cursive;
+}
+
+#add, #update, #delete {
+    font-size: 24px;
+}
+
+#add:hover, #update:hover, #delete:hover {
+    text-decoration: underline;
 }

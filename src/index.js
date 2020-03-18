@@ -13,6 +13,7 @@ const {getMovies, postMovie, editMovie, deleteMovie } = require('./api.js');
 
 
 
+
 //This prints existing movie JSON file
 getMovies().then((movies) => {
   console.log('Here are all the existing movies:');
@@ -37,8 +38,6 @@ getMovies().then((movies) => {
 $("#loading").ajaxStop(function(){
   $(this).hide();
 });
-
-
 
 
 
@@ -74,8 +73,9 @@ $('#add').click(function () {
 });
 
 
-// Updates existing movie list with new user inputs
 
+
+// Updates existing movie list with new user inputs
 $("#update").click(function(){
 
   editMovie($("#chosenTitle").val(), {
@@ -100,15 +100,15 @@ $("#update").click(function(){
       $("#chosenTitle").val("");
     });
   }).catch((error) => {
-    alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
+    alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.');
     console.log(error);
   }));
 });
 
 
 
-// Deletes specified movie
 
+// Deletes specified movie
 $("#delete").click(function() {
   console.log($("#removeTitle").attr("id"));
   deleteMovie($("#removeTitle").val()).then(data => getMovies()).then((movies) => {
@@ -129,27 +129,13 @@ $("#delete").click(function() {
       $("#removeTitle").val("");
     });
   }).catch((error) => {
-    alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.')
+    alert('Something\'s wrong with the G Diffuser.\nCheck the console for details.');
     console.log(error);
   });
-
 });
 
-// function deferVideo() {
-//
-//   //defer html5 video loading
-//   $("video source").each(function() {
-//     var sourceFile = $(this).attr("data-src");
-//     $(this).attr("src", sourceFile);
-//     var video = this.parentElement;
-//     video.load();
-//     // uncomment if video is not autoplay
-//     //video.play();
-//   });
-//
-// }
-// window.onload = deferVideo;
 
+//Slide down functionality
 $("#newMovie").hide();
 $("#editMovie").hide();
 $("#deleteMovie").hide();
@@ -161,13 +147,13 @@ $("#addButton").click(function(){
 });
 
 $("#editButton").click(function(){
-  $("#editMovie").slideDown()
+  $("#editMovie").slideDown();
   $("#newMovie").hide();
   $("#deleteMovie").hide();
 });
 
 $("#deleteButton").click(function(){
-  $("#deleteMovie").slideDown()
+  $("#deleteMovie").slideDown();
   $("#newMovie").hide();
   $("#editMovie").hide();
 });
