@@ -1,6 +1,9 @@
 html, body {
-    height: 100%;
-    /*background-color: black;*/
+    /*height: 100%;*/
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+    /*background: rgb(0,0,0);*/
+    /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(61,4,8,1) 47%, rgba(150,0,15,1) 100%);*/
+
 }
 
 /*body {*/
@@ -17,15 +20,15 @@ div.jumbotron {
     margin-bottom: 0;
 }
 
-#top-nav{
-    position: sticky;
-    background-color: lightgray;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 30px;
-}
-#top-nav a {
-    color: black;
-}
+/*#top-nav{*/
+/*    position: sticky;*/
+/*    background-color: lightgray;*/
+/*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+/*    margin-bottom: 30px;*/
+/*}*/
+/*#top-nav a {*/
+/*    color: black;*/
+/*}*/
 
 /*.jumbotron {*/
 /*    position: relative;*/
@@ -55,39 +58,74 @@ div.jumbotron {
 }
 
 #jumbotronContainer {
-    padding-top: 0px;
+    padding-top: px;
     padding-bottom: 0px;
    background-color: black;
+    z-index: -1;
 }
 
 .ticket {
-    box-shadow: 0 4px 8px 0 darkgray;
+    /*box-shadow: 0 4px 8px 0 darkgray;*/
 }
-.ticket:hover {
-    box-shadow: 0 4px 12px 0 black;
-    background-color: rgb(105 15 18);
-}
+/*.ticket:hover {*/
+/*    !*box-shadow: 0 4px 12px 0 black;*!*/
+/*    !*background-color: goldenrod;*!*/
+/*    !*background: rgb(0,0,0);*!*/
+/*    !*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(225,130,0,1) 33%, rgba(225,167,0,1) 100%);*!*/
+/*    color: #ffa502;*/
+/*    box-shadow: 0 0 15px #d35400;*/
+/*    text-shadow: 0 0 15px #d35400;*/
+/*}*/
 
+.ticket:hover:before {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #d35400;
+    filter: blur(3px);
+}
 .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
-    box-shadow: 0 4px 6px 0 lightgray;
+    background-color: goldenrod;
+    box-shadow: 0 4px 12px 0 black;
 
 }
 .card:hover {
     background-color: antiquewhite;
-    box-shadow: 0 4px 12px 0 black;
+    box-shadow: 0 4px 6px 0 lightgray;
 }
 
-#movie-container {
-    margin-bottom: 200px;
-}
+/*#movie-container {*/
+/*    margin-bottom: 200px;*/
+/*}*/
 
 #curtains {
-    background-image: url("img/seats.png");
+    /*background-image: url("img/curtains.png");*/
+    /*z-index: 300;*/
+    width: 100%;
 }
 
 #buttonContainer {
-    background-color: black;
+    /*background-color: black;*/
+    padding-bottom: 10px;
+}
+
+#seats {
+    width: 100%;
+}
+
+#gradient {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(61,4,8,1) 47%, rgba(150,0,15,1) 100%);
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+/*h5 {*/
+/*    color: goldenrod;*/
+/*}*/
+
+#newMovie, #editMovie, #deleteMovie {
+    color: goldenrod;
 }

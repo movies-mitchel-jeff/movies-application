@@ -17,6 +17,11 @@
       "rating": "10",
       "id": 3,
       "img": "img/nowshowingkhan.png"
+    },
+    {
+      "title": "david",
+      "rating": "codeup",
+      "id": 5
     }
   ]
 }

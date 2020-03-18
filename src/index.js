@@ -19,11 +19,11 @@ getMovies().then((movies) => {
   movies.forEach(({title, rating, id, img}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     $('#movies').append(`<div id="${id}" class="col-sm-4">
-        <div class="card" style="width: 18rem; height: 18rem;">
+        <div class="card" style="width: 20rem; background-color: goldenrod">
         <img src="../${img}" alt="poster">
-         <div class="card-body">
-              <h5 class="card-title">Movie: #${id} - ${title}</h5>
-             <p class="card-text">rating: ${rating}</p>
+         <div class="card-body text-center">
+              <h5 class="card-title">#${id} - ${title}</h5>
+             <h5 class="card-text">Rating: ${rating}</h5>
          </div>
         </div>
         </div>`)
@@ -54,13 +54,15 @@ $('#add').click(function () {
     $('#movies').empty();
     movie.forEach(({title, rating, id, img}) => {
       console.log(` id#${id} - ${title} - ${rating}`);
-      $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
-        <img src=${img} class="card-img-top">
-    <div class="card-body">
-        <h5 class="card-title">Movie: ${id} - ${title} </h5>
-        <p class="card-text"> Rating:${rating}</p>
-    </div>
-</div></div>`)
+      $('#movies').append(`<div id="${id}" class="col-sm-4">
+        <div class="card" style="width: 20rem; background-color: goldenrod">
+        <img src="../${img}" alt="poster">
+         <div class="card-body text-center">
+              <h5 class="card-title">#${id} - ${title}</h5>
+             <h5 class="card-text">Rating: ${rating}</h5>
+         </div>
+        </div>
+        </div>`);
       $("#movieTitle").val("");
       $("#movieRating").val("");
     });
@@ -82,14 +84,17 @@ $("#update").click(function(){
   }).then(data => getMovies().then((movie) => {
     console.log('Here is the edited movie:');
     $("#movies").empty();
-    movie.forEach(({title, rating, id}) => {
+    movie.forEach(({title, rating, id, img}) => {
       console.log(`id# ${id} - ${title} - ${rating} `);
-      $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Movie: ${id} - ${title} </h5>
-        <p class="card-text"> Rating: ${rating}</p>
-    </div>
-</div></div>`)
+      $('#movies').append(`<div id="${id}" class="col-sm-4">
+        <div class="card" style="width: 20rem; background-color: goldenrod">
+        <img src="../${img}" alt="poster">
+         <div class="card-body text-center">
+              <h5 class="card-title">#${id} - ${title}</h5>
+             <h5 class="card-text">Rating: ${rating}</h5>
+         </div>
+        </div>
+        </div>`);
       $("#editTitle").val("");
       $("#editRating").val("");
       $("#chosenTitle").val("");
@@ -110,14 +115,17 @@ $("#delete").click(function() {
     // console.log('Here are all the books after the deletion:');
     console.log(movies);
       $('#movies').empty();
-    movies.forEach(({title, rating, id}) => {
+    movies.forEach(({title, rating, id, img}) => {
       console.log(`id# ${id} - ${title} - ${rating}.`);
-      $('#movies').append(`<div class="col-sm-4"> <div class="card" style="width: 18rem; height: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Movie: ${id} - ${title}</h5>
-        <p class="card-text"> Rating: ${rating}</p>
-    </div>
-</div></div>`)
+      $('#movies').append(`<div id="${id}" class="col-sm-4">
+        <div class="card" style="width: 20rem; background-color: goldenrod">
+        <img src="../${img}" alt="poster">
+         <div class="card-body text-center">
+              <h5 class="card-title">#${id} - ${title}</h5>
+             <h5 class="card-text">Rating: ${rating}</h5>
+         </div>
+        </div>
+        </div>`);
       $("#removeTitle").val("");
     });
   }).catch((error) => {
